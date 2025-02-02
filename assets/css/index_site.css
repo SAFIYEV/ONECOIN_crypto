@@ -102,7 +102,7 @@ body {
     z-index: 1;
 }
 .intro__logo {
-    font-size: 15vw;
+    font-size: 17vw;
     color: #fff;
     z-index: 2;
     animation: float 3s infinite ease-in-out;
