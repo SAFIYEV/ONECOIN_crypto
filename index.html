@@ -21,13 +21,14 @@
                 <div class="line"></div>
                 <div class="line"></div>
               </div>
-              <ul class="nav__links">
-                <li><a href="assets/news.html" class="nav__link">News</a></li>
-                <li> <a href="assets/cryptocurrencies.html" class="nav__link">Our Cryptocurrencies</a></li>
-                <li><a href="assets/aboutceo.html" class="nav__link">About our CEO</a></li>
-                <li><a href="https://t.me/gotochannels19" target="_blank" class="nav__link">Our social networks</a></li>
-                <li><a href="https://app.ston.fi/liquidity/provide?ft=TON&pool=new&tt=EQCdgBzD52PbK1QKfO-Aih0RKQSUNfRN5NQRRzbV4tTDGjD1" target="_blank" class="nav__link">Project support</a></li>
-                <li> <a href="mailto:code.one@inbox.ru" class="nav__link">Do you need help?</a></li>
+              <ul class="menu">
+                <li><a href="assets/news.html" class="menu-item">News</a></li>
+                <li> <a href="assets/cryptocurrencies.html" class="menu-item">Our Cryptocurrencies</a></li>
+                <li><a href="assets/aboutceo.html" class="menu-item">About our CEO</a></li>
+                <li><a href="https://t.me/gotochannels19" target="_blank" class="menu-item">Our social networks</a></li>
+                <li><a href="https://app.ston.fi/liquidity/provide?ft=TON&pool=new&tt=EQCdgBzD52PbK1QKfO-Aih0RKQSUNfRN5NQRRzbV4tTDGjD1" target="_blank" class="menu-item">Project support</a></li>
+                <li> <a href="mailto:code.one@inbox.ru" class="menu-item">Do you need help?</a></li>
+                <li><a id="language-switcher" class="language-btn">ru</a></li>
                 <!-- <a href="#" class="nav__link">History of the bank</a> -->
               </ul>
             </nav>
@@ -43,36 +44,105 @@
     <!-- Map -->
     <section class="map" id="section__map">
         <div class="map__container">
-            <h2 class="map__h2">Development map</h2>
-            <a href="files/SRC roadmap.pdf" class="map__btn">Donwload</a>
+            <h2 class="section-title">Development map</h2>
+            <a href="files/SRC roadmap.pdf" class="map-btn">Donwload</a>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <h2 class="footer__text">
+    <footer class="footer">
+        <h2 class="footer__text, footer-item">
             ONECOIN &#169 All rights reserved
         </h2>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-        </div>
         <div class="footer-links">
-            <a href="#privacy-policy" class="footer-link">Privacy Policy</a>
-            <a href="#terms" class="footer-link">Terms of Service</a>
-            <a href="mailto:safiyevmarat.business@gmail.com" class="footer-link">Contact Us</a>
+            <a href="#privacy-policy" class="footer-link footer-item">Privacy Policy</a>
+            <a href="#terms" class="footer-link footer-item">Terms of Service</a>
+            <a href="mailto:safiyevmarat.business@gmail.com" class="footer-link footer-item">Contact Us</a>
         </div>
     </footer>
 
+    <script>
+        // Объект с переводами
+        const translations = {
+            en: {
+                menuItems: [
+                    "News",
+                    "Our Cryptocurrencies",
+                    "About our CEO",
+                    "Our social networks",
+                    "Project support",
+                    "Do you need help?"
+                ],
+                introButton: "Open the application",
+                sectionTitle: "Development map",
+                mapButton: "Donwload",
+                footerItems: [
+                    "ONECOIN © All rights reserved",
+                    "Privacy Policy",
+                    "Terms of Service",
+                    "Contact Us"
+                ],
+                switchLanguage: "ru"
+            },
+            ru: {
+                menuItems: [
+                    "Новости",
+                    "Наши криптовалюты",
+                    "О нашем CEO",
+                    "Наши социальные сети",
+                    "Поддержка проекта",
+                    "Нужна помощь?"
+                ],
+                introButton: "Открыть приложение",
+                sectionTitle: "Карта развития",
+                mapButton: "Скачать",
+                footerItems: [
+                    "ONECOIN © Все права защищены",
+                    "Политика конфиденциальности",
+                    "Условия использования",
+                    "Связаться с нами"
+                ],
+                switchLanguage: "en"
+            }
+        };
+
+        // Текущий язык
+        let currentLanguage = 'en';
+
+        // Функция для изменения языка
+        function changeLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'ru' : 'en';
+            updateText();
+        }
+
+        // Функция для обновления текста на странице
+        function updateText() {
+            // Обновляем пункты меню
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach((item, index) => {
+                item.textContent = translations[currentLanguage].menuItems[index];
+            });
+
+            // Обновляем заголовок раздела
+            document.querySelector('.intro__btn').textContent = translations[currentLanguage].introButton;
+            document.querySelector('.section-title').textContent = translations[currentLanguage].sectionTitle;
+            document.querySelector('.map-btn').textContent = translations[currentLanguage].mapButton;
+
+            // Обновляем текст в подвале
+            const footerItems = document.querySelectorAll('.footer-item');
+            footerItems.forEach((item, index) => {
+                item.textContent = translations[currentLanguage].footerItems[index];
+            });
+
+            // Обновляем текст на кнопке
+            document.getElementById('language-switcher').textContent = translations[currentLanguage].switchLanguage;
+        }
+
+        // Добавляем обработчик события для кнопки
+        document.getElementById('language-switcher').addEventListener('click', changeLanguage);
+
+        // Инициализация текста при загрузке страницы
+        updateText();
+    </script>
 </body>
 
 </html>

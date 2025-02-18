@@ -18,25 +18,25 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-              </div>
-              <ul class="nav__links">
-                <li><a href="news.html" class="nav__link">News</a></li>
-                <li> <a href="../index.html" class="nav__link">Home page</a></li>
-                <li><a href="aboutceo.html" class="nav__link">About our CEO</a></li>
-                <li><a href="https://t.me/gotochannels19" target="_blank" class="nav__link">Our social networks</a></li>
-                <li><a href="https://app.ston.fi/liquidity/provide?ft=TON&pool=new&tt=EQCdgBzD52PbK1QKfO-Aih0RKQSUNfRN5NQRRzbV4tTDGjD1" target="_blank" class="nav__link">Project support</a></li>
-                <li> <a href="mailto:code.one@inbox.ru" class="nav__link">Do you need help?</a></li>
+            </div>
+            <ul class="menu">
+                <li><a href="news.html" class="menu-item">News</a></li>
+                <li> <a href="../index.html" class="menu-item">Home page</a></li>
+                <li><a href="aboutceo.html" class="menu-item">About ceo</a></li>
+                <li><a href="https://t.me/gotochannels19" target="_blank" class="menu-item">Our social networks</a></li>
+                <li><a href="https://app.ston.fi/liquidity/provide?ft=TON&pool=new&tt=EQCdgBzD52PbK1QKfO-Aih0RKQSUNfRN5NQRRzbV4tTDGjD1" target="_blank" class="menu-item">Project support</a></li>
+                <li> <a href="mailto:code.one@inbox.ru" class="menu-item">Do you need help?</a></li>
                 <!-- <a href="#" class="nav__link">History of the bank</a> -->
+                <li><a id="language-switcher" class="language-btn">ru</a></li>
               </ul>
             </nav>
-        </nav>
     </header>
 
     <!-- Cryptocurrencies Section -->
     <section class="crypto">
         <div class="crypto__container">
             <div class="crypto__content">
-                <h2 class="crypto__heading">Our Cryptocurrencies</h2>
+                <h2 class="crypto-title">Our Cryptocurrencies</h2>
                 <ol class="crypto__list">
                     <li class="crypto-li">ONECOIN</li>
                 </ol>
@@ -44,33 +44,30 @@
         </div>
     
         <div class="crypto__airdrop">
-            <h2 class="crypto__participation">Have time to participate in the AirDrop ONECOIN</h2>
-            <button class="crypto__btn">
-                <h3 class="btn__text">Participate (coming soon)</h3>
-            </button>
+            <h2 class="airdrop-info">Have time to participate in the AirDrop ONECOIN</h2>
+            <button id="airdrop-button" class="crypto__btn" >Participate (coming soon)</button>
         </div>
     
-        <h2 class="crypto__raffle">Airdrop Rewards Breakdown</h2>
+        <h2 class="reward-title">Airdrop Rewards Breakdown</h2>
         <div class="crypto__scheme-container">
             <div class="crypto__scheme-content">
                 <img src="Image/Group 1.svg" alt="Airdrop Scheme" class="crypto__scheme">
                 <div class="text__scheme">
                     <div class="text__block">
                         <h3 class="text__title">100,000 Coins</h3>
-                        <p class="text__description">To be divided between <strong>500 participants</strong>.</p>
+                        <p class="text__description reward-details">To be divided between <strong>500 participants</strong>.</p>
                     </div>
                     <div class="text__block">
                         <h3 class="text__title">10 TONCOINS</h3>
-                        <p class="text__description">To be awarded to <strong>5 lucky participants</strong>.</p>
+                        <p class="text__description reward-details">To be awarded to <strong>5 lucky participants</strong>.</p>
                     </div>
                 </div>
             </div>
         </div>
-    
-        <div class="crypto__conditions">
-            <p class="text__conditions">The condition for participating in Airdrop is very simple:</p>
-            <p class="text__conditions">You just need to be subscribed to the telegram channel <a href="https://t.me/onecointon">ONECOIN</a></p>
-            <p class="text__conditions">AirDrop starts - 05.02.2025<br>Completion of Airdrop - 01.03.2025</p>
+        <div class="crypto__airdrop">
+            <p class="text__conditions airdrop-condition">The condition for participating in Airdrop is very simple:</p>
+            <p class="text__conditions condition">You just need to be subscribed to the telegram channel <a href="https://t.me/onecointon">ONECOIN</a></p>
+            <p class="text__conditions airdrop-dates">AirDrop starts - 05.02.2025<br>Completion of Airdrop - 01.03.2025</p>
         </div>
     </section>
     
@@ -78,48 +75,153 @@
     <!-- Investors Form -->
     <section class="form">
         <div class="form__container">
-            <h2 class="form__heading">For Investors</h2>
-            <p class="form__description">We value your interest in our bank. Please fill out the form below to get in touch with us:</p>
+            <h2 class="form__heading investor-title">For Investors</h2>
+            <p class="form__description investor-info">We value your interest in our bank. Please fill out the form below to get in touch with us:</p>
             <form class="form__content">
                 <label for="name" class="form__label">Your Name</label>
-                <input type="text" id="name" name="name" class="form__input" placeholder="Enter your name">
+                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name">
     
                 <label for="email" class="form__label">Your Email</label>
-                <input type="email" id="email" name="email" class="form__input" placeholder="Enter your email">
+                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email">
     
                 <label for="message" class="form__label">Your Message</label>
-                <textarea id="message" name="message" class="form__textarea" placeholder="Write your message"></textarea>
+                <textarea id="message" name="message" class="textarea form-input" placeholder="Write your message"></textarea>
     
-                <button type="submit" class="btn__form">Send Message</button>
+                <button type="submit" class="btn__form form-submit">Send Message</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <h2 class="footer__text">
+    <footer class="footer">
+        <h2 class="footer__text, footer-item">
             ONECOIN &#169 All rights reserved
         </h2>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-        </div>
         <div class="footer-links">
-            <a href="#privacy-policy" class="footer-link">Privacy Policy</a>
-            <a href="#terms" class="footer-link">Terms of Service</a>
-            <a href="#contact" class="footer-link">Contact Us</a>
+            <a href="#privacy-policy" class="footer-link footer-item">Privacy Policy</a>
+            <a href="#terms" class="footer-link footer-item">Terms of Service</a>
+            <a href="mailto:safiyevmarat.business@gmail.com" class="footer-link footer-item">Contact Us</a>
         </div>
     </footer>
+
+    <script>
+        // Объект с переводами
+        const translations = {
+            en: {
+                menuItems: [
+                    "News",
+                    "Home page",
+                    "About our CEO",
+                    "Our social networks",
+                    "Project support",
+                    "Do you need help?"
+                ],
+                ulTitle: "Our Cryptocurrencies",
+                airdropInfo: "Have time to participate in the AirDrop ONECOIN",
+                airdropButton: "Participate (coming soon)",
+                rewardTitle: "Airdrop Rewards Breakdown",
+                rewardDetails1: "To be divided between 500 participants.",
+                rewardDetails2: "To be awarded to 5 lucky participants.",
+                airdropCondition: "The condition for participating in Airdrop is very simple:",
+                conditon: "You just need to be subscribed to the telegram channel ONECOIN.",
+                airdropDates: "AirDrop starts - 05.02.2025 Completion of Airdrop - 01.03.2025",
+                investorTitle: "For Investors",
+                investorInfo: "We value your interest in our bank. Please fill out the form below to get in touch with us:",
+                formPlaceholderName: "Your Name",
+                formPlaceholderEmail: "Your Email",
+                formPlaceholderMessage: "Your Message",
+                formSubmit: "Send Message",
+                footerItems: [
+                    "ONECOIN © All Rights Reserved",
+                    "Privacy Policy",
+                    "Terms of Service",
+                    "Contact Us"
+                ],
+                switchLanguage: "ru"
+            },
+            ru: {
+                menuItems: [
+                    "Новости",
+                    "Домашняя страница",
+                    "О нашем СЕО",
+                    "Наши социальные сети",
+                    "Поддержка проекта",
+                    "Нужна помощь?"
+                ],
+                ulTitle: "Наша криптовалюта",
+                airdropInfo: "Успейте принять участие в Airdrop ONECOIN",
+                airdropButton: "Участвовать (скоро)",
+                rewardTitle: "Разбивка вознаграждений Airdrop",
+                rewardDetails1: "Будут разделены между 500 участниками.",
+                rewardDetails2: "Будут вручены 5 счастливчикам.",
+                airdropCondition: "Условие участия в Airdrop очень простое:",
+                condition:" вам просто нужно быть подписанным на телеграм-канал ONCOINE.",
+                airdropDates: "Начало Airdrop — 05.02.2025 Завершение Airdrop — 01.03.2025",
+                investorTitle: "Для инвесторов",
+                investorInfo: "Мы ценим ваш интерес к нашему банку. Пожалуйста, заполните форму ниже, чтобы связаться с нами:",
+                formPlaceholderName: "Ваше имя",
+                formPlaceholderEmail: "Ваш email",
+                formPlaceholderMessage: "Ваше сообщение",
+                formSubmit: "Отправить сообщение",
+                footerItems: [
+                    "ONECOIN © Все права защищены",
+                    "Политика конфиденциальности",
+                    "Условия использования",
+                    "Связаться с нами"
+                ],
+                switchLanguage: "en"
+            }
+        };
+
+        // Текущий язык
+        let currentLanguage = 'en';
+
+        // Функция для изменения языка
+        function changeLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'ru' : 'en';
+            updateText();
+        }
+
+        // Функция для обновления текста на странице
+        function updateText() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach((item, index) => {
+                item.textContent = translations[currentLanguage].menuItems[index];
+            });
+            document.querySelector('.crypto-title').textContent = translations[currentLanguage].ulTitle;
+            document.querySelector('.airdrop-info').textContent = translations[currentLanguage].airdropInfo;
+            document.getElementById('airdrop-button').textContent = translations[currentLanguage].airdropButton;
+            document.querySelector('.reward-title').textContent = translations[currentLanguage].rewardTitle;
+            document.querySelectorAll('.reward-details')[0].textContent = translations[currentLanguage].rewardDetails1;
+            document.querySelectorAll('.reward-details')[1].textContent = translations[currentLanguage].rewardDetails2;
+            document.querySelector('.airdrop-condition').textContent = translations[currentLanguage].airdropCondition;
+            document.querySelector('.condition').textContent = translations[currentLanguage].condition;
+            document.querySelector('.airdrop-dates').textContent = translations[currentLanguage].airdropDates;
+            document.querySelector('.investor-title').textContent = translations[currentLanguage].investorTitle;
+            document.querySelector('.investor-info').textContent = translations[currentLanguage].investorInfo;
+
+            // Обновляем плейсхолдеры и кнопку формы
+            document.querySelectorAll('.form-input')[0].placeholder = translations[currentLanguage].formPlaceholderName;
+            document.querySelectorAll('.form-input')[1].placeholder = translations[currentLanguage].formPlaceholderEmail;
+            document.querySelector('textarea.form-input').placeholder = translations[currentLanguage].formPlaceholderMessage;
+            document.querySelector('.form-submit').textContent = translations[currentLanguage].formSubmit;
+
+            // Обновляем пункты футера
+            const footerItems = document.querySelectorAll('.footer-item');
+            footerItems.forEach((item, index) => {
+                item.textContent = translations[currentLanguage].footerItems[index];
+            });
+
+            // Обновляем текст на кнопке
+            document.getElementById('language-switcher').textContent = translations[currentLanguage].switchLanguage;
+        }
+
+        // Добавляем обработчик события для кнопки
+        document.getElementById('language-switcher').addEventListener('click', changeLanguage);
+
+        // Инициализация текста при загрузке страницы
+        updateText();
+    </script>
 </body>
 
 </html>

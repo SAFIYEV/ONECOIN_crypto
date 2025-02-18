@@ -20,13 +20,14 @@
                 <div class="line"></div>
                 <div class="line"></div>
               </div>
-              <ul class="nav__links">
-                <li><a href="news.html" class="nav__link">News</a></li>
-                <li> <a href="cryptocurrencies.html" class="nav__link">Our Cryptocurrencies</a></li>
-                <li><a href="../index.html" class="nav__link">Home page</a></li>
-                <li><a href="https://t.me/gotochannels19" target="_blank" class="nav__link">Our social networks</a></li>
-                <li><a href="https://app.ston.fi/liquidity/provide?ft=TON&pool=new&tt=EQCdgBzD52PbK1QKfO-Aih0RKQSUNfRN5NQRRzbV4tTDGjD1" target="_blank" class="nav__link">Project support</a></li>
-                <li> <a href="mailto:code.one@inbox.ru" class="nav__link">Do you need help?</a></li>
+              <ul class="menu">
+                <li><a href="news.html" class="menu-item">News</a></li>
+                <li> <a href="cryptocurrencies.html" class="menu-item">Our Cryptocurrencies</a></li>
+                <li><a href="../index.html" class="menu-item">Home page</a></li>
+                <li><a href="https://t.me/gotochannels19" target="_blank" class="menu-item">Our social networks</a></li>
+                <li><a href="https://app.ston.fi/liquidity/provide?ft=TON&pool=new&tt=EQCdgBzD52PbK1QKfO-Aih0RKQSUNfRN5NQRRzbV4tTDGjD1" target="_blank" class="menu-item">Project support</a></li>
+                <li> <a href="mailto:code.one@inbox.ru" class="menu-item">Do you need help?</a></li>
+                <li><a id="language-switcher" class="language-btn">ru</a></li>
                 <!-- <a href="#" class="nav__link">History of the bank</a> -->
               </ul>
             </nav>
@@ -35,59 +36,143 @@
 
     <!-- About CEO Section -->
     <section class="aboutceo">
-        <h2 class="about__heading">Meet Our Visionary CEO</h2>
+        <h2 class="section-title">Meet Our Visionary CEO</h2>
         <div class="about__container">
             <div class="about__image-container">
                 <div class="img-1 img"></div>
                 <div class="img-2 img"></div>
             </div>
             <div class="about__text-container">
-                <p class="about__text">
+                <p class="about__text ceo-description">
                     Meet our CEO, Safiev Marat! Founder of "SADLAHAY_CODE" and "ONECODE crypto". 
                 </p>
-                <p class="about__text">
+                <p class="about__text company-description">
                     SADLAHAY_CODE is an advanced company specializing in custom software development and launching its own technological innovations under its own name.
                 </p>
-                <p class="about__text">
+                <p class="about__text crypto-description">
                     The key cryptocurrency, ONE CODE crypto - ONECOIN, aims to change the financial landscape. 
                 </p>
-                <p class="about__text">
+                <p class="about__text roadmap-description">
                     You can find the detailed roadmap of this transformative project in our main menu.
                 </p>
             </div>
         </div>
         <div class="feedback">
-            <h2 class="feedback__heading">Get in Touch with Safiev Marat</h2>
-            <p class="feedback__text">For collaborations, team applications, or investment opportunities:</p>
-            <a href="mailto:safiyevmarat.business@gmail.com" class="feedback__email">
+            <h2 class="feedback__heading contact-title">Get in Touch with Safiev Marat</h2>
+            <p class="feedback__text contact-info">For collaborations, team applications, or investment opportunities:</p>
+            <a href="mailto:safiyevmarat.business@gmail.com" class="feedback__email email">
                 safiyevmarat.business@gmail.com
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <h2 class="footer__text">ONECOIN &#169; All Rights Reserved</h2>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-        </div>
+    <footer class="footer">
+        <h2 class="footer__text, footer-item">
+            ONECOIN &#169 All rights reserved
+        </h2>
         <div class="footer-links">
-            <a href="#privacy-policy" class="footer-link">Privacy Policy</a>
-            <a href="#terms" class="footer-link">Terms of Service</a>
-            <a href="#contact" class="footer-link">Contact Us</a>
+            <a href="#privacy-policy" class="footer-link footer-item">Privacy Policy</a>
+            <a href="#terms" class="footer-link footer-item">Terms of Service</a>
+            <a href="mailto:safiyevmarat.business@gmail.com" class="footer-link footer-item">Contact Us</a>
         </div>
     </footer>
+
+    <script>
+        // Объект с переводами
+        const translations = {
+            en: {
+                menuItems: [
+                    "News",
+                    "Our Cryptocurrencies",
+                    "Home page",
+                    "Our social networks",
+                    "Project support",
+                    "Do you need help?"
+                ],
+                sectionTitle: "Meet Our Visionary CEO",
+                ceoDescription: "Meet our CEO, Safiev Marat! Founder of 'SADLAHAY_CODE' and 'ONECODE crypto'.",
+                companyDescription: "SADLAHAY_CODE is an advanced company specializing in custom software development and launching its own technological innovations under its own name.",
+                cryptoDescription: "The key cryptocurrency, ONE CODE crypto - ONECOIN, aims to change the financial landscape.",
+                roadmapDescription: "You can find the detailed roadmap of this transformative project in our main menu.",
+                contactTitle: "Get in Touch with Safiev Marat",
+                contactInfo: "For collaborations, team applications, or investment opportunities:",
+                email: "safiyevmarat.business@gmail.com",
+                footerItems: [
+                    "ONECOIN © All Rights Reserved",
+                    "Privacy Policy",
+                    "Terms of Service",
+                    "Contact Us"
+                ],
+                switchLanguage: "ru"
+            },
+            ru: {
+                menuItems: [
+                    "Новости",
+                    "Наши криптовалюты",
+                    "Домашняя страница",
+                    "Наши социальные сети",
+                    "Поддержка проекта",
+                    "Нужна помощь?"
+                ],
+                sectionTitle: "Познакомьтесь с нашим видением будущего — CEO",
+                ceoDescription: "Представляем вам CEO, Сафиева Марата! Основателя 'SADLAHAY_CODE' и 'ONECODE crypto'.",
+                companyDescription: "SADLAHAY_CODE — передовая компания, специализирующаяся на разработке индивидуального программного обеспечения и запуска собственных технологических инноваций под своим именем.",
+                cryptoDescription: "Основная криптовалюта, ONE CODE crypto — ONECOIN, стремится изменить финансовую отрасль.",
+                roadmapDescription: "Вы можете найти подробную дорожную карту этого трансформационного проекта в нашем главном меню.",
+                contactTitle: "Свяжитесь с Сафиевым Маратом",
+                contactInfo: "Для сотрудничества, заявок на работу в команду или инвестиционных возможностей:",
+                email: "safiyevmarat.business@gmail.com",
+                footerItems: [
+                    "ONECOIN © Все права защищены",
+                    "Политика конфиденциальности",
+                    "Условия использования",
+                    "Связаться с нами"
+                ],
+                switchLanguage: "en"
+            }
+        };
+
+        // Текущий язык
+        let currentLanguage = 'en';
+
+        // Функция для изменения языка
+        function changeLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'ru' : 'en';
+            updateText();
+        }
+
+        // Функция для обновления текста на странице
+        function updateText() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach((item, index) => {
+                item.textContent = translations[currentLanguage].menuItems[index];
+            });
+            document.querySelector('.section-title').textContent = translations[currentLanguage].sectionTitle;
+            document.querySelector('.ceo-description').textContent = translations[currentLanguage].ceoDescription;
+            document.querySelector('.company-description').textContent = translations[currentLanguage].companyDescription;
+            document.querySelector('.crypto-description').textContent = translations[currentLanguage].cryptoDescription;
+            document.querySelector('.roadmap-description').textContent = translations[currentLanguage].roadmapDescription;
+            document.querySelector('.contact-title').textContent = translations[currentLanguage].contactTitle;
+            document.querySelector('.contact-info').textContent = translations[currentLanguage].contactInfo;
+            document.querySelector('.email').textContent = translations[currentLanguage].email;
+
+            // Обновляем пункты футера
+            const footerItems = document.querySelectorAll('.footer-item');
+            footerItems.forEach((item, index) => {
+                item.textContent = translations[currentLanguage].footerItems[index];
+            });
+
+            // Обновляем текст на кнопке
+            document.getElementById('language-switcher').textContent = translations[currentLanguage].switchLanguage;
+        }
+
+        // Добавляем обработчик события для кнопки
+        document.getElementById('language-switcher').addEventListener('click', changeLanguage);
+
+        // Инициализация текста при загрузке страницы
+        updateText();
+    </script>
 </body>
 
 </html>
