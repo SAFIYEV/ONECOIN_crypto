@@ -14,16 +14,11 @@ body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-#language-switcher {
-    margin-right: 40px;
-    font-weight: bold;
-}
 
 /* Navigation*/
-
 .nav {
     align-items: center;
-    padding: 30px auto;
+    padding: 10px 30px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -32,22 +27,22 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.menu {
+.nav__links {
     list-style: none;
     display: flex;
     justify-content: space-between;
 }
-.menu-item {
+.nav__link {
     position: relative;
     font-size: 18px;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-.menu-item:hover {
+.nav__link:hover {
     color: #72a9ff;
 }
-.menu-item::after {
+.nav__link::after {
     content: '';
     position: absolute;
     width: 0;
@@ -57,7 +52,7 @@ body {
     bottom: -5px;
     transition: width 0.3s ease;
 }
-.menu-item:hover::after {
+.nav__link:hover::after {
     width: 100%;
 }
 
@@ -111,7 +106,7 @@ section {
     overflow: hidden;
 }
 
-.crypto-title {
+.crypto__heading {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 20px;
@@ -145,7 +140,7 @@ section {
     animation: fadeInDown 1.5s ease;
 }
 
-.airdrop-info {
+.crypto__participation {
     font-size: 2rem;
     color: #fff;
     margin-bottom: 20px;
@@ -156,7 +151,7 @@ section {
     display: block;
     margin: 0 auto;
     font-size: 1.3rem;
-    height: 90px;
+    padding: 15px 50px;
     border-radius: 50px;
     background: linear-gradient(90deg, #4884ff, #72a9ff);
     color: #fff;
@@ -170,7 +165,7 @@ section {
     box-shadow: 0 10px 20px rgba(72, 132, 255, 0.8);
 }
 
-.reward-title {
+.crypto__raffle {
     text-align: center;
     font-size: 1.8rem;
     color: #72a9ff;
@@ -339,8 +334,8 @@ section {
     margin: 5px 0;
 }
 
-.form-input,
-.textarea {
+.form__input,
+.form__textarea {
     width: 100%;
     max-width: 400px;
     padding: 10px 15px;
@@ -483,7 +478,7 @@ footer {
     .crypto__btn {
         padding: 10px 30px;
     }
-    .menu {
+    .nav__links {
         position: fixed;
         top: 80px;
         right: -300px;
@@ -495,7 +490,7 @@ footer {
         margin-bottom:15px;
         display: none;
       }
-      .menu.nav__active {
+      .nav__links.nav__active {
         right: 0;
         display: block;
       }

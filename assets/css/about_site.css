@@ -15,17 +15,9 @@ body {
 }
 
 /* Navigation */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#language-switcher {
-    margin-left: 15px;
-}
 .nav {
     align-items: center;
-    padding: 25px 30px;
+    padding: 10px 30px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -33,18 +25,18 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
 }
-.menu {
+.nav__links {
     list-style: none;
     display: flex;
     justify-content: space-between;
 }
-.menu-item {
+.nav__link {
     font-size: 18px;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-.menu-item:hover {
+.nav__link:hover {
     color: #72a9ff;
 }
 
@@ -88,7 +80,7 @@ header {
     position: relative;
 }
 
-.section-title {
+.about__heading {
     text-align: center;
     font-size: 2.8rem;
     color: #72a9ff;
@@ -285,7 +277,7 @@ footer {
     .hamburger {
         display: block;
     }
-    .menu {
+    .nav__links {
         position: fixed;
         top: 80px;
         right: -300px;
@@ -297,12 +289,9 @@ footer {
         margin-bottom:15px;
         display: none;
       }
-      .menu.nav__active {
+      .nav__links.nav__active {
         right: 0;
         display: block;
-      }
-      .aboutceo {
-        margin:0;
       }
 }
 @media(max-width:445px) {
